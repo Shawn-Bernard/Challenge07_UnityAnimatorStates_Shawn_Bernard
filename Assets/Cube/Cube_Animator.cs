@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.Runtime.CompilerServices;
 
-public class Animation_Test : MonoBehaviour
+public class Cube_Animator : MonoBehaviour
 {
     public Animator animator;
     public TextMeshProUGUI text;
@@ -20,16 +20,12 @@ public class Animation_Test : MonoBehaviour
         {
             if (animator.GetBool("Rotate"))
             {
-                animator.ResetTrigger("Spinning");
-                animator.SetTrigger("Spinning");
-                //UpdateBool(false);
+                UpdateBool(false);
                 Debug.Log("Not spinning");
             }
             else
             {
-                animator.ResetTrigger("Rotate");
-                animator.SetTrigger("Static");
-                //UpdateBool(true);
+                UpdateBool(true);
                 Debug.Log("Spinning!!!!");
             }
             text.text = $"Roate = {animator.GetBool("Rotate")}";
