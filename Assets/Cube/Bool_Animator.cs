@@ -4,7 +4,7 @@ using UnityEngine;
 using TMPro;
 using System.Runtime.CompilerServices;
 
-public class Cube_Animator : MonoBehaviour
+public class Bool_Animator : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     public TextMeshProUGUI text;

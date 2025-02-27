@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class Chest_Animator : MonoBehaviour
+public class Trigger_Animator : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     public TextMeshProUGUI text;

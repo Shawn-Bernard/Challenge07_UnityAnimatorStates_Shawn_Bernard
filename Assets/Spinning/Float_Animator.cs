@@ -4,7 +4,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Experimental.GlobalIllumination;
 
-public class Spinning_Animator : MonoBehaviour
+public class Float_Animator : MonoBehaviour
 {
     [SerializeField] private Animator animator;
     public TextMeshProUGUI text;
