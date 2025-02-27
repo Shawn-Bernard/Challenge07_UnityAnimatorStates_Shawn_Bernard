@@ -11,9 +11,6 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: Rotate
     m_EventTreshold: 0
-  - m_ConditionMode: 1
-    m_ConditionEvent: Spinning
-    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -2593237753365138599}
   m_Solo: 0

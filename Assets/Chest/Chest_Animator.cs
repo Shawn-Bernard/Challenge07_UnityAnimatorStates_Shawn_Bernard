@@ -5,11 +5,14 @@ using UnityEngine;
 
 public class Chest_Animator : MonoBehaviour
 {
-    public Animator animator;
+    [SerializeField] private Animator animator;
     public TextMeshProUGUI text;
+    [SerializeField] Camera cam;
+    [SerializeField] GameObject camSpot_3;
     // Start is called before the first frame update
     void Start()
     {
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -17,21 +20,12 @@ public class Chest_Animator : MonoBehaviour
     {
         if (Input.GetKeyUp(KeyCode.Space))
         {
-            if (animator.GetBool("open"))
-            {
-                UpdateBool(false);
-                Debug.Log("Not spinning");
-            }
-            else
-            {
-                UpdateBool(true);
-                Debug.Log("Spinning!!!!");
-            }
-            text.text = $"Roate = {animator.GetBool("Rotate")}";
+            cam.transform.position = camSpot_3.transform.position;
+            // Resetting the trigger just in case
+            animator.ResetTrigger("Chest_Trigger");
+            // Activating the trigger
+            animator.SetTrigger("Chest_Trigger");
+            text.text = $"Chest has been triggered";
         }
-    }
-    void UpdateBool(bool Bool)
-    {
-        animator.SetBool("Rotate", Bool);
     }
 }
